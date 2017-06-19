@@ -15,8 +15,8 @@ module.exports = {
       $('table.table-list tr').each(function(index, el) {
         var torrent = {}
         torrent.name = $(this).find('td:nth-child(1) a:nth-child(2)').text()
-        torrent.seeds = $(this).find('td:nth-child(2)').text()
-        torrent.leechs = $(this).find('td:nth-child(3)').text()
+        torrent.seeders = $(this).find('td:nth-child(2)').text()
+        torrent.leechers = $(this).find('td:nth-child(3)').text()
         torrent.url = leetURL + $(this).find('td:nth-child(1) a:nth-child(2)').attr('href')
         if (torrent.name !== '') {
           torrents.push(torrent)
