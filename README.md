@@ -8,9 +8,9 @@ A Node.js module to search for torrents at 1337x.to tracker.
 ```javascript
 const leetx = require('leetx')
 
-leetx.search(keyword, results) {
+leetx.search(keyword, function(err, results) {
   console.log(results) // returns name, seeders, leechers, url
-}
+})
 ```
 
 ## Packages
