@@ -6,7 +6,6 @@ const cheerio = require('cheerio')
 let leetxURL = 'http://1337x.to'
 
 module.exports = {
-
   search: function(keyword, cb) {
     let torrents = []
     var reqURL = leetxURL + '/search/' + keyword + '/1/'
@@ -25,5 +24,4 @@ module.exports = {
       return cb(null, torrents)
     })
   }
-
 }
