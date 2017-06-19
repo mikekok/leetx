@@ -1,6 +1,6 @@
 {
   "name": "leetx",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "Search torrents at 1337x.to",
   "main": "index.js",
   "scripts": {
