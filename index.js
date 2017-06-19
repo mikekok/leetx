@@ -6,7 +6,6 @@ const cheerio = require('cheerio')
 let leetxURL = 'http://1337x.to'
 
 module.exports = {
-
   search: function(keyword, cb) {
     let torrents = []
     var reqURL = leetxURL + '/search/' + keyword + '/1/'
@@ -17,7 +16,7 @@ module.exports = {
         torrent.name = $(this).find('td:nth-child(1) a:nth-child(2)').text()
         torrent.seeders = $(this).find('td:nth-child(2)').text()
         torrent.leechers = $(this).find('td:nth-child(3)').text()
-        torrent.url = leetURL + $(this).find('td:nth-child(1) a:nth-child(2)').attr('href')
+        torrent.url = leetxURL + $(this).find('td:nth-child(1) a:nth-child(2)').attr('href')
         if (torrent.name !== '') {
           torrents.push(torrent)
         }
@@ -25,5 +24,4 @@ module.exports = {
       return cb(null, torrents)
     })
   }
-
 }
